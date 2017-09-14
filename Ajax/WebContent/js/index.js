@@ -5,8 +5,20 @@ $(function(){
 		$.get("fechador", function(data){
 			
 		
-		$('pre').html(data);
+		$('#demo1').html(data);
 		});
+	});
+	
+	$('form').submit(function(e){
+		e.preventDefault();
+		
+		
+		$.get("multiplicador?num="+ $('#num').val(), function(data){
+			
+			
+			$('#resultado').html(data);
+			});
+		
 	});
 	
 });
